@@ -1,0 +1,48 @@
+{
+    "name": "Esteban Pisani",
+    "position":"Desarrollador Web Full Stack",
+    "repo" : "https://github.com/estebanpisani",
+    "linkedin" : "https://www.linkedin.com/in/esteban-pisani/",
+    "email" : "estebandpisani@gmail.com",
+    "picture" : "../img/CV4.png",
+    "education" : [
+        {
+            "name" : "Argentina Programa",
+            "link" : "https://argentinaprograma.inti.gob.ar/",
+            "date" : "2022 (En curso)",
+            "description": "Curso de desarrollo web Full Stack."
+        },
+        {
+            "name" : "Egg Education",
+            "link" : "https://eggeducacion.com/",
+            "date" : "2021",
+            "description": "Curso de desarrollo web Full Stack."       
+        }
+    ],
+    "experience" : [
+        {
+        "name" : "Red Electrónica",
+        "link" : "http://www.redelectronica.com.ar/",
+        "date" : "2021 - 2022",
+        "description": "Técnico instalador y reparador de alarmas y cámaras."
+        },
+        {
+        "name" : "Prioridad 1",
+        "link" : "https://prioridad1.com.ar/",
+        "date" : "2015 - 2021",
+        "description": "Operador en Central de Monitoreo de Alarmas."       
+        }
+    ],
+    "projects":[
+        {
+            "name": "Inmobiliaria Bonpland",
+            "link" : "https://github.com/estebanpisani/InmobiliariaBonpland",
+            "description":"API Rest para gestión de inmuebles."
+        },
+        {
+            "name": "Vecinal 'La República'",
+            "link" : "https://github.com/estebanpisani/vecinalLaRepublica",
+            "description":"Sitio web para la gestión de vecinal ubicada en la ciudad de Rosario, Santa Fe."
+        }
+    ]
+}
