@@ -1,0 +1,32 @@
+/* FONTS */
+/*
+Titillium Web 
+font-family: 'Titillium Web', sans-serif;
+
+Alegreya
+font-family: 'Alegreya', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Titillium+Web:wght@300;400&display=swap');
+
+.font-alegreya{
+    font-family: 'Alegreya', serif;
+    /*
+    font-weight: 500;
+    */
+}
+.font-titillium{
+    font-family: 'Titillium Web', sans-serif;
+    /*
+        letter-spacing: 2px;
+    font-weight: 500;
+    */
+
+}
+
+
+#sidebar-image {
+    max-height: 40%;
+    max-width: 40%;  
+    border-radius: 50%;
+    padding-bottom: 20px;
+}
