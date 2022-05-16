@@ -1,0 +1,34 @@
+<div class="card bg-dark" id="educacion-section">
+    <div class="container card-header">
+        <div class="row justify-content-between">
+            <div class="col-md-4 col-10">
+                <h3 class="text-center text-md-start text-xxl-center" style="font-family: font-titillium, sans-serif;">Educación I.T.
+                </h3>
+            </div>
+            <div *ngIf="isAdmin" class="col-md-4 col-2 text-end text-md-end text-xxl-end">
+                <button type="button" class="btn text-light " routerLink="/new-edu"><i class="fa-solid fa-circle-plus"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-dark" *ngIf="isFail">
+            {{errorMsg}}
+        </li>
+        <li *ngIf="!isFail" class="list-group-item list-group-item-dark">
+            <div *ngFor="let educacion of educacionList" class="card-body list-group-flush">
+                <h5 class="bg-transparent list-group-item card-title text-center text-md-start text-xxl-center">
+                    <a href="{{educacion.websiteURL}}" class= "text-dark" style="text-decoration: none;" target="_blank">{{educacion.nombreInstituto}}</a>
+                    <span *ngIf="educacion.fechaInicio"> | {{educacion.fechaInicio}}</span>
+                    <span *ngIf="educacion.fechaInicio && educacion.fechaFin"> - {{educacion.fechaFin}}</span>
+                    
+                    <button *ngIf="isAdmin" type="button" class="btn" routerLink="edit-edu/{{educacion.id}}"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button *ngIf="isAdmin" type="button" class="btn" (click)="borrarEducacion(educacion.curso, educacion.id!)"><i class="fa-solid fa-trash-can"></i></button>                                    
+                </h5>
+                
+                <h6 class="card-title">{{educacion.curso}}</h6>
+                <p class="card-text text-center text-md-start text-xxl-center">{{educacion.descripcion}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
