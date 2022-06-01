@@ -3,8 +3,8 @@ export class Trabajo {
 	nombreEmpresa:string;
 	puesto:string;
 	descripcion?:string;
-	fechaInicio?:string;
-	fechaFin?:string;
+	fechaInicio:string;
+	fechaFin:string;
 	websiteURL?:string;
 
     constructor(nombreEmpresa:string, puesto:string, descripcion:string, fechaInicio:string, fechaFin:string, websiteURL:string){

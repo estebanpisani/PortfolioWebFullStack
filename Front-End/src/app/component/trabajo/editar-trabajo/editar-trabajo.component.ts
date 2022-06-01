@@ -25,7 +25,6 @@ export class EditarTrabajoComponent implements OnInit {
     this.trabajoService.get(id).subscribe(
       data=>{
         this.trabajo=data;
-        console.log(this.trabajo.fechaInicio)
       },
       err=>{
         console.log(err);
@@ -38,7 +37,6 @@ export class EditarTrabajoComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.trabajoService.edit(id, this.trabajo).subscribe(
       data=>{
-        console.log('Trabajo Actualizado.');
         this.router.navigate(['/']);
       },
       err=>{

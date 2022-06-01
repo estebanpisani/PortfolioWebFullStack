@@ -19,7 +19,7 @@ export class TrabajoService {
     return this.httpClient.get<Trabajo[]>(this.trabajoURL + '/list');
   }
 
-  public save(trabajo:Trabajo): Observable<any>{
+  public save(trabajo:Object): Observable<any>{
     return this.httpClient.post<any>(this.trabajoURL + '/save', trabajo);
   }
 

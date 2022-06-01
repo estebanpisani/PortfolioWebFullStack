@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class SidebarComponent implements OnInit {
 
-  persona:Persona = null!;
+  persona:Persona=new Persona("", "", "","", "","", "", "", "", "", "", "", "");
   isFail=false;
   errorMsg:string='';
   aboutEdit=false;
@@ -27,17 +27,18 @@ export class SidebarComponent implements OnInit {
     ) {}
 
   ngOnInit(){
+    this.cargarPersona();
     this.roles = this.tokenService.getAuthorities();
     this.roles.forEach(rol =>{
       if(rol==='ROLE_ADMIN'){
         this.isAdmin=true;
       }
     });
+    
     this.aboutEdit=false;
     this.dataEdit=false;
     this.linksEdit=false;
     this.isFail=false;
-    this.cargarPersona();
   }
 
   cargarPersona():void{

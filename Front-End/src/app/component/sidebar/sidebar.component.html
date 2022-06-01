@@ -11,7 +11,6 @@
                     <i class="fa-solid fa-pen-to-square"></i>
                 </button>
             </h6>
-
             <form *ngIf="aboutEdit; else aboutBlock"  (ngSubmit)="onUpdate()">
                 <label for="aboutMe" class="form-label">Escriba una descripción:</label>
                 <input type="text" id="descripcion" name="descripcion" id="aboutMe" aria-describedby="AboutMe-Block" class="form-control" [(ngModel)]="persona.descripcion">
@@ -20,11 +19,11 @@
                 </button>
             </form>
             <ng-template #aboutBlock>
-            <div >{{persona.descripcion}}</div>
+                <div>
+                    <p>{{persona.descripcion}}</p>
+
+                </div>
             </ng-template>
-
-
-
             <hr>
         </div>
         <!-- PERSONAL DATA  -->

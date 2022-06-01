@@ -17,10 +17,10 @@
         </li>
         <li *ngIf="!isFail" class="list-group-item list-group-item-dark">
             <div *ngFor="let educacion of educacionList" class="card-body list-group-flush">
-                <h5 class="bg-transparent list-group-item card-title text-center text-md-start text-xxl-center">
+                <h5 class="bg-transparent list-group-item card-title text-center text-md-start text-xxl-center px-0">
                     <a href="{{educacion.websiteURL}}" class= "text-dark" style="text-decoration: none;" target="_blank">{{educacion.nombreInstituto}}</a>
-                    <span *ngIf="educacion.fechaInicio"> | {{educacion.fechaInicio}}</span>
-                    <span *ngIf="educacion.fechaInicio && educacion.fechaFin"> - {{educacion.fechaFin}}</span>
+                    <span *ngIf="educacion.fechaInicio"> | {{educacion.fechaInicio.slice(5,7)}}/{{educacion.fechaInicio.slice(0,4)}}</span>
+                    <span *ngIf="educacion.fechaInicio && educacion.fechaFin"> - {{educacion.fechaFin.slice(5,7)}}/{{educacion.fechaFin.slice(0,4)}}</span>
                     
                     <button *ngIf="isAdmin" type="button" class="btn" routerLink="edit-edu/{{educacion.id}}"><i class="fa-solid fa-pen-to-square"></i></button>
                     <button *ngIf="isAdmin" type="button" class="btn" (click)="borrarEducacion(educacion.curso, educacion.id!)"><i class="fa-solid fa-trash-can"></i></button>                                    

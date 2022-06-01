@@ -11,7 +11,7 @@ import { TokenService } from './../../service/token.service';
 export class TrabajoComponent implements OnInit {
 
   trabajoList:Trabajo[] = [];
-  roles: string[]=[];
+  roles:string[]=[];
   isAdmin = false;
   isFail=false;
   errorMsg='';
@@ -34,7 +34,7 @@ export class TrabajoComponent implements OnInit {
   cargarTrabajo():void{
     this.trabajoService.list().subscribe(
       data=>{
-        this.trabajoList = data;
+          this.trabajoList=data;  
       },
       err=>{
         this.isFail=true;
