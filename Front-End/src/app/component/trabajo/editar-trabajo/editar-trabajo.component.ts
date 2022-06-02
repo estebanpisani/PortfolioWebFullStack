@@ -10,7 +10,7 @@ import { TrabajoService } from 'src/app/service/trabajo.service';
 })
 export class EditarTrabajoComponent implements OnInit {
 
-  trabajo:Trabajo=null!;
+  trabajo:Trabajo = new Trabajo("", "", "", "", "", "");
   isFail = false;
   errorMsg:string='';
 

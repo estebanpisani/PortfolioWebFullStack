@@ -10,7 +10,7 @@ import { Educacion } from './../../../models/educacion';
 })
 export class EditarEducacionComponent implements OnInit {
 
-  educacion:Educacion=null!;
+  educacion:Educacion=new Educacion("","","","","","");
   isFail = false;
   errorMsg:string='';
 

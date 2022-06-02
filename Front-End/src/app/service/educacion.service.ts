@@ -27,7 +27,6 @@ export class EducacionService {
     return this.httpClient.put<Educacion>(this.educacionURL + `/edit/${id}`, educacion);
   }
   public delete(id:number): Observable<any>{
-    console.log("Entró en el service. Id: "+id);
     return this.httpClient.delete<any>(this.educacionURL + '/delete/'+id);
   }
 

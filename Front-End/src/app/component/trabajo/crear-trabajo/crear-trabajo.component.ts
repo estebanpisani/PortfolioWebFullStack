@@ -26,15 +26,7 @@ export class CrearTrabajoComponent implements OnInit {
 
   onCreate():void{
     this.isFail = false;
-    const trabajo = {
-                      nombreEmpresa:this.nombreEmpresa,
-                      puesto:this.puesto,
-                      descripcion:this.descripcion,
-                      fechaInicio:this.fechaInicio,
-                      fechaFin:this.fechaFin,
-                      websiteURL:this.websiteURL
-    };
-    console.log(trabajo);
+    const trabajo = new Trabajo(this.nombreEmpresa, this.puesto, this.descripcion, this.fechaInicio,this.fechaFin,this.websiteURL);
     this.trabajoService.save(trabajo).subscribe(
       data =>{
         this.router.navigate(['/']);

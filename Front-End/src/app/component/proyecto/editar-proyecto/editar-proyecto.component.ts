@@ -10,7 +10,7 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 })
 export class EditarProyectoComponent implements OnInit {
 
-  proyecto:Proyecto=null!;
+  proyecto:Proyecto= new Proyecto("","","");
   isFail = false;
   errorMsg:string='';
 
